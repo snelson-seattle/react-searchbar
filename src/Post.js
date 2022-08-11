@@ -3,10 +3,10 @@
 
 const Post = ({ post }) => {
   return (
-    <article>
-      <h2>{post.title}</h2>
-      <p>{post.body}</p>
-      <p>Post ID: {post.id}</p>
+    <article className="flex flex-col shadow my-4">
+      <h2 className="text-2xl font-bold pb-3">{post.title}</h2>
+      <p className="pb-3">{post.body}</p>
+      <p className="pb-3">Post ID: {post.id}</p>
     </article>
   );
 };

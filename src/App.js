@@ -8,7 +8,6 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    console.log("use effect");
     getPosts()
       .then((jsonData) => {
         setPosts(jsonData);

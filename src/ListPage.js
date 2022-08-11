@@ -12,12 +12,19 @@ const ListPage = ({ searchResults }) => {
   const content = results?.length ? (
     results
   ) : (
-    <article>
-      <p>No Matching Posts</p>
+    <article className="flex flex-col">
+      <h2 className="text-2xl font-bold pb-3">No Matching Posts</h2>
     </article>
   );
 
-  return <main>{content}</main>;
+  return (
+    <main className="container mx-auto flex flex-wrap py-6">
+      <section className="w-full md:w-2/3 flex flex-col items-center px-3">
+        <h1 className="text-[32px] self-start mb-4">Posts</h1>
+        {content}
+      </section>
+    </main>
+  );
 };
 
 export default ListPage;
